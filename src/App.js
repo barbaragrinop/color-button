@@ -2,6 +2,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 
+export function replaceCamelWithSpaces(colorName) {
+  return colorName.replace(/\B([A-Z])\B/g, " $1");
+}
+
 function App() {
   const [buttonProps, setButtonProps] = useState({
     name: "Change to blue",
